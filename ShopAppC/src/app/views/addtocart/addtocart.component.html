@@ -1,8 +1,24 @@
-<div class="row" *ngFor="let cItem of cartItems">
-    <div class="col">
-        <ul class="list-group">
-            <li class="list-group-item">{{cItem.pName}}</li>
-            
-          </ul>
+<div class="container">
+    <div class="row" *ngFor="let cItem of cartItems">
+        <div class="col">
+            <div class="div list-group-item">
+                <div class="row">
+                    <div class="col-3">Put Image Here</div>
+                    <div class="col-3">
+                        {{cItem.pName}}
+                    </div>
+                    <div class="col-3">
+                        {{cItem.pDesc}}
+                    </div>
+                    <div class="col-3">
+                        <button type="button" (click)= "removeItem(cItem)" class="btn btn-danger">Remove</button>
+                    </div>
+                </div>
+                <br>
+                
+                
+            </div>
+        </div>
     </div>
+    <button type="button" (click)="removeCartItems()" class="btn btn-primary">Remove All</button>
 </div>
